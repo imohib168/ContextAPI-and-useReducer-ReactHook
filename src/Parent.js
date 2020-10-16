@@ -4,7 +4,7 @@ import Child2 from './Child2'
 
 function Parent() {
     return (
-        <div>
+        <div className="Parent">
             Parent Component
             <Child />
             <Child2 />
