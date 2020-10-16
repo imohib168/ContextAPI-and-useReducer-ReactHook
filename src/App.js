@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Parent from './Parent.js'
-// import logo from './logo.svg';
-// import './App.css';
+import ValueContext from './ValueContext.js'
+import './App.css';
 
 function App() {
-  let [number, setNumber] = useState(18);
+	let value = useState(1);
+	return (
+		<ValueContext.Provider value={value}>
+			<div className="App">
+				App Component
+		  		<Parent />
+			</div>
+		</ValueContext.Provider>
 
-  return (
-    <div>
-      <Parent num={number} />
-      Number: {number} <br />
-      <button onClick={() => { setNumber(++number) }}>Increment Number</button>
-    </div>
-  );
+	);
 }
 
 export default App;
