@@ -10,7 +10,7 @@ function App() {
     <div>
       <Parent num={number} />
       Number: {number} <br />
-      <button onClick={() => { setNumber(++number) }}>Update Number</button>
+      <button onClick={() => { setNumber(++number) }}>Increment Number</button>
     </div>
   );
 }
